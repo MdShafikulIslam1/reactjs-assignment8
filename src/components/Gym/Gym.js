@@ -1,19 +1,20 @@
 import React from 'react';
 
 const Gym = ({gym}) => {
-    const {time,name,picture} = gym;
+    const {time,name,picture,age} = gym;
     
     return (
         <div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-4/5 h-96 bg-base-100 shadow-xl">
         <figure>
-            <img src={picture} alt="Shoes" />
+            <img className="w-full h-40" src={picture} alt="Shoes" />
         </figure>
-        <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
+        <div className="p-3">
+                <h2 className="text-2xl text-center font-bold mb-3">{name}</h2>
+                <p className="text-lg font-semibold leading-loose">For age:{age} years</p>
+                <p className="text-lg font-semibold leading-loose">Time required:{time} seconds</p>
+            <div className="card-actions">
+                <button className="btn btn-primary w-full absolute bottom-0 left-0">Buy Now</button>
             </div>
         </div>
       </div>
