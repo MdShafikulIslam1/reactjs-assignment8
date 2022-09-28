@@ -10,8 +10,13 @@ const Gyms = () => {
     },[])
     return (
         <div>
-           <div className="gym-container">
-           
+           <div className="gym-container w-[75%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 g-4">
+           {
+            gyms.map(gym => <Gym
+                            gym ={gym} 
+                            key = {gym.id}
+                            ></Gym>)
+           }
            </div>
            <div className="gym-calculate"></div>
             
