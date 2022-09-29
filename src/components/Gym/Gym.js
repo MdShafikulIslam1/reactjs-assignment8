@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Gym = ({gym}) => {
+const Gym = ({gym,handleExerciseCalculate}) => {
     const {time,name,picture,age} = gym;
     
     return (
@@ -14,7 +14,7 @@ const Gym = ({gym}) => {
                 <p className="text-lg font-semibold leading-loose">For age:{age} years</p>
                 <p className="text-lg font-semibold leading-loose">Time required:{time} seconds</p>
             <div className="card-actions">
-                <button className="btn btn-primary w-full absolute bottom-0 left-0">Buy Now</button>
+                <button onClick={() => handleExerciseCalculate(time)} className="btn btn-primary w-full absolute bottom-0 left-0">Add to LIst</button>
             </div>
         </div>
       </div>

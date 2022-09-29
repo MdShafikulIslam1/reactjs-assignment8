@@ -3,6 +3,12 @@ import Gym from '../Gym/Gym';
 
 const Gyms = () => {
     const [gyms,setGyms] =useState([]);
+    const [count,setCount] = useState(0);
+    
+    const handleExerciseCalculate = (time) =>{
+        setCount(count + time);
+    }
+    // console.log(needTime);
     useEffect(() =>{
         fetch(`data.json`)
         .then(res => res.json())
@@ -15,6 +21,7 @@ const Gyms = () => {
             gyms.map(gym => <Gym
                             gym ={gym} 
                             key = {gym.id}
+                            handleExerciseCalculate = {handleExerciseCalculate}
                             ></Gym>)
            }
            </div>
@@ -33,18 +40,18 @@ const Gyms = () => {
                </div>
                <h1 className="text-3xl font-bold pl-5 mt-9">Add a Break:</h1>
                <div className="flex justify-between my-4 p-4">
-                    <button className="btn btn-info border rounded-full">10s</button>
-                    <button className="btn btn-info border rounded-full">20s</button>
-                    <button className="btn btn-info border rounded-full">30s</button>
-                    <button className="btn btn-info border rounded-full">40s</button>
-                    <button className="btn btn-info border rounded-full">50s</button>
-                    <button className="btn btn-info border rounded-full">60s</button>
+                    <button className="btn btn-info border rounded-full">10 s</button>
+                    <button className="btn btn-info border rounded-full">20 s</button>
+                    <button className="btn btn-info border rounded-full">30 s</button>
+                    <button className="btn btn-info border rounded-full">40 s</button>
+                    <button className="btn btn-info border rounded-full">50 s</button>
+                    <button className="btn btn-info border rounded-full">60 s</button>
                    
                     
                </div>
                <h1 className="text-3xl font-bold pl-5 mt-9">Gym Details:</h1>
                <div className="ml-8 text-2xl font-medium bg-cyan-200 p-5 m-3 border rounded-lg">
-                    <p>Exercise Time: 200 sec.</p>
+                    <p>Exercise Time: {count} sec.</p>
                </div>
                <div className="ml-8 text-2xl font-medium bg-cyan-200 p-5 m-3 border rounded-lg">
                     <p>Break Time: 200 sec.</p>
