@@ -32,13 +32,25 @@ const Gyms = () => {
                <p>Age:23 Years</p> 
                </div>
                <h1 className="text-3xl font-bold pl-5 mt-9">Add a Break:</h1>
-               <div className="flex justify-between">
-                    <button>10s</button>
-                    <button>20s</button>
-                    <button>30s</button>
-                    <button>40s</button>
-                    <button>50s</button>
-                    <button>60s</button>
+               <div className="flex justify-between my-4 p-4">
+                    <button className="btn btn-info border rounded-full">10s</button>
+                    <button className="btn btn-info border rounded-full">20s</button>
+                    <button className="btn btn-info border rounded-full">30s</button>
+                    <button className="btn btn-info border rounded-full">40s</button>
+                    <button className="btn btn-info border rounded-full">50s</button>
+                    <button className="btn btn-info border rounded-full">60s</button>
+                   
+                    
+               </div>
+               <h1 className="text-3xl font-bold pl-5 mt-9">Gym Details:</h1>
+               <div className="ml-8 text-2xl font-medium bg-cyan-200 p-5 m-3 border rounded-lg">
+                    <p>Exercise Time: 200 sec.</p>
+               </div>
+               <div className="ml-8 text-2xl font-medium bg-cyan-200 p-5 m-3 border rounded-lg">
+                    <p>Break Time: 200 sec.</p>
+               </div>
+               <div>
+               <button className="btn btn-info border rounded-lg w-full text-xl p-2">Activity Completed</button>
                </div>
 
            </div>
